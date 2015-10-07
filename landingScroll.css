@@ -1,0 +1,60 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+
+    /*Avoid flicker on slides transitions for mobile phones #336 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.box {
+    width:100px;
+    height: 100px;
+    background: red;
+}
+#avoidScroll{
+    height:100%;
+    position:fixed;
+    top:0;
+    right:0;
+    z-index:4222;
+    width:27px;
+    background:#ccc;
+    opacity:0;
+    	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+#fakeScroller{
+    height:100%;
+    position:fixed;
+    top:0;
+    right:0;
+    z-index:3222;
+    overflow-y:scroll;
+}
+#fakeContent{
+    height: 200%;
+    display:block;
+    width:1px;
+}
+
+.box {
+    display:block;
+    width:70%;
+    height:20px;
+    padding:20px;
+    background: #ccc;
+    margin: 20px;
+}
+h1 {
+    padding: 0 0 0.2em;
+    color: #000;
+    font-weight: 800;
+    font-size: 3.25em;
+    margin: 0 auto;
+}
+.ls-centered{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
